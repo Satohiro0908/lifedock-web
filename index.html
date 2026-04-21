@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>広尾オレンジクリニック - ライフステージに寄り添う、予防医療のパートナー</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F3811D",
+                        "primary-light": "#FFDCC6",
+                        "secondary": "#31685d",
+                        "background": "#FEF9F3",
+                        "surface": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-surface-variant": "#564336",
+                        "outline": "#F3811D",
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body id="top"
+    class="page-index w-full max-w-[480px] md:max-w-[1100px] xl:max-w-[1320px] 2xl:max-w-[1560px] mx-auto overflow-x-hidden">
+    <!-- 開始: メインヘッダー -->
+    <header
+        class="flex items-center justify-between px-4 py-3 md:px-6 bg-white sticky top-0 z-50 border-b border-gray-100"
+        data-purpose="site-header">
+        <div class="flex items-center gap-2">
+            <img alt="広尾オレンジクリニック" class="w-8 h-8" src="images/logo.png" />
+            <span class="text-orange-main font-bold text-lg md:text-xl leading-tight">広尾オレンジクリニック</span>
+        </div>
+        <button type="button" aria-expanded="false" aria-controls="mobile-submenu"
+            class="flex flex-col items-center justify-center border-l pl-4 md:pl-5" data-purpose="mobile-menu-toggle">
+            <div class="w-6 h-0.5 bg-gray-600 mb-1"></div>
+            <div class="w-6 h-0.5 bg-gray-600 mb-1"></div>
+            <div class="w-6 h-0.5 bg-gray-600"></div>
+            <span class="text-[10px] font-bold text-gray-600 mt-1 uppercase">Menu</span>
+        </button>
+    </header>
+    <nav id="mobile-submenu"
+        class="fixed top-[61px] left-1/2 -translate-x-1/2 w-full max-w-[480px] md:max-w-[1100px] xl:max-w-[1320px] 2xl:max-w-[1560px] z-40 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-md transition-transform transition-opacity duration-300 ease-out -translate-y-full opacity-0 pointer-events-none"
+        data-purpose="mobile-submenu">
+        <ul class="py-2 text-sm font-bold text-[#1b1c1c]">
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#top">TOP</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#lifedock">LifeDock</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#exam-menu">検査メニュー</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#voices">体験者の声</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#flow">ご利用の流れ</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#director">院長紹介</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#faq">よくある質問</a></li>
+            <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#access">アクセス</a></li>
+        </ul>
+    </nav>
+    <!-- 終了: メインヘッダー -->
+    <!-- 開始: ヒーローセクション -->
+    <section class="relative" data-purpose="hero-banner">
+        <img alt="Clinic Interior" class="w-full h-auto" src="images/entrance.png" />
+        <div class="bg-orange-main text-white px-8 py-10 text-center flex flex-col items-center">
+            <img alt="LifeDock" class="w-16 h-16 mb-4" src="images/logo_white.png" />
+            <h1 class="text-xl md:text-2xl font-bold leading-relaxed tracking-wider mb-4">
+                ライフステージに寄り添う、<br />予防医療のパートナー。
+            </h1>
+            <p class="text-sm leading-loose">
+                妊娠期から子ども、そして大人になるまで、<br />
+                生まれる前から一生の健康をサポートします。
+            </p>
+        </div>
+    </section>
+    <!-- 終了: ヒーローセクション -->
+    <!-- 開始: Aboutセクション -->
+    <section class="bg-dark-section text-white relative py-16 px-6 text-center" data-purpose="about-clinic">
+        <!-- 背景画像オーバーレイ（暗め） -->
+        <div class="absolute inset-0 opacity-20 bg-[url('images/about.png')] bg-cover bg-center">
+        </div>
+        <div class="relative z-10">
+            <p class="text-sm tracking-[0.2em] mb-2">ABOUT</p>
+            <div class="flex justify-center mb-6">
+                <img alt="LifeDock" class="h-12 w-auto" src="images/logo_white.png" />
+            </div>
+            <h2 class="text-xl font-bold mb-8">広尾オレンジクリニックとは</h2>
+            <div class="space-y-4 text-sm leading-relaxed tracking-wide">
+                <p class="font-bold">広尾オレンジクリニックは</p>
+                <p class="font-bold">お子さまが 30 年、</p>
+                <p class="font-bold">40 年後の未来で今と同じように</p>
+                <p class="font-bold">健康な心と体で元気に過ごせる。</p>
+                <p class="font-bold">そんな状態を目指すための</p>
+                <p class="font-bold">予防医学をメインに扱っている</p>
+                <p class="font-bold">クリニックです。</p>
+            </div>
+        </div>
+    </section>
+    <!-- 終了: Aboutセクション -->
+    <!-- 開始: 環境セクション -->
+    <section class="bg-[#FDF6F0] py-16 px-6 text-center" data-purpose="trust-features">
+        <div class="flex justify-center mb-4">
+            <svg class="w-10 h-10 text-orange-200 fill-current" viewbox="0 0 24 24">
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                </path>
+            </svg>
+        </div>
+        <h2 class="text-xl font-bold mb-10">安心して通える環境</h2>
+        <div class="grid grid-cols-3 gap-3 mb-8">
+            <div class="bg-white rounded-lg p-3 card-shadow">
+                <div class="flex justify-center mb-2">
+                    <img alt="Access" class="w-8 h-8" src="images/ping.png" />
+                </div>
+                <p class="text-xs font-bold leading-tight"><span class="text-orange-main">広尾</span> 駅<br />徒歩 2 分</p>
+            </div>
+            <div class="bg-white rounded-lg p-3 card-shadow">
+                <div class="flex justify-center mb-2">
+                    <img alt="Schedule" class="w-8 h-8" src="images/calendar.png" />
+                </div>
+                <p class="text-xs font-bold leading-tight"><span class="text-orange-main">土日祝</span><br />対応可能</p>
+            </div>
+            <div class="bg-white rounded-lg p-3 card-shadow border-2 border-orange-main">
+                <div class="flex justify-center mb-2">
+                    <img alt="Reservation" class="w-8 h-8" src="images/lock.png" />
+                </div>
+                <p class="text-xs font-bold leading-tight"><span class="text-orange-main">完全</span><br />予約制</p>
+            </div>
+        </div>
+        <a class="inline-flex items-center text-orange-main font-bold text-sm mb-10" href="#">
+            <img alt="Pin" class="w-4 h-4 mr-1" src="images/ping.png" />
+            アクセスはこちら
+        </a>
+        <p class="text-[13px] text-gray-600 text-center leading-relaxed">
+            ※ 保険診療、診療は行っておりません。<br />
+            体調のすぐれない方、薬処方をご希望の方は<br />
+            保険診療を行っている医療を受診ください。
+        </p>
+    </section>
+    <!-- 終了: 環境セクション -->
+    <!-- 開始: LifeDockプロモーション -->
+    <section id="lifedock" class="py-16 px-4 bg-white text-center" data-purpose="child-dock-promo">
+        <div class="flex justify-center mb-4">
+            <img alt="LifeDock Logo" class="h-10" src="images/logo_text.png" />
+        </div>
+        <h2 class="text-2xl font-bold mb-10 leading-tight">
+            <span class="text-orange-main">未来</span>の健康を守る、<br />
+            こどもの<span class="text-orange-main">人間ドック</span>
+        </h2>
+        <div class="mb-10">
+            <img alt="Family" class="w-full rounded-xl" src="images/future.png" />
+        </div>
+        <!-- 特徴カード -->
+        <div class="feature-cards-wrap mb-10">
+            <!-- カード 1: みえる -->
+            <div class="feature-card">
+                <div class="feature-card-title">
+                    <h3>みえる</h3>
+                    <img alt="Search" class="feature-card-icon" src="images/search.png" />
+                </div>
+                <p class="feature-card-text">
+                    <span class="text-orange-main font-bold">採血 65
+                        項目</span>で、現在の栄養状態、不足している栄養素と将来の生活習慣病のなりやすさなどをチェックします。
+                </p>
+            </div>
+            <!-- カード 2: かわる -->
+            <div class="feature-card">
+                <div class="feature-card-title">
+                    <h3>かわる</h3>
+                    <img alt="Graph" class="feature-card-icon" src="images/graph.png" />
+                </div>
+                <p class="feature-card-text">
+                    現在の食事状況、血液検査の結果を分析し、<span
+                        class="text-orange-main font-bold">お一人お一人に合わせた健康的な食事や改善点を栄養士から対面でアドバイス</span>を受けられます。
+                </p>
+            </div>
+        </div>
+        <div class="mb-12">
+            <img alt="Staff" class="w-64 h-auto mx-auto mb-8" src="images/staff.png" />
+            <a class="block w-full py-4 bg-orange-main text-white font-bold rounded-lg shadow-lg hover:bg-orange-dark transition-colors"
+                href="#">
+                Life Dock について詳しく見る
+            </a>
+        </div>
+    </section>
+    <!-- 終了: LifeDockプロモーション -->
+    <!-- 開始: メニューセクション -->
+    <section id="exam-menu" class="bg-[#FDF6F0] py-16 px-4" data-purpose="examination-menu">
+        <div class="text-center mb-10">
+            <div class="flex justify-center mb-2">
+                <img alt="Icon" class="w-12 h-12" src="images/menu.png" />
+            </div>
+            <h2 class="text-xl font-bold tracking-widest">検査メニュー</h2>
+        </div>
+        <!-- 検査カード 1: WISC4 -->
+        <div class="bg-white rounded-lg p-6 mb-8 card-shadow border-t-4 border-orange-main" data-purpose="wisc-exam">
+            <h3 class="text-orange-main text-xl font-bold text-center mb-4 border-b-2 border-orange-main">知能検査 (WISC4)
+            </h3>
+            <div class="border-b border-orange-200 mb-6 pb-2">
+                <p class="text-center text-orange-main font-bold text-sm leading-relaxed">
+                    勉強・運動・育児。<br />
+                    お子さまに適した「伸ばし方」<br />
+                    がわかる。
+                </p>
+            </div>
+            <div class="text-sm leading-relaxed space-y-4 mb-8">
+                <p>IQ（知能指数）だけでなく、処理速度や記憶力など 4 つの指標を多角的に分析し、効率的な勉強方法や、得意科目、向いているスポーツを分析します。</p>
+                <p>お子様の個性に合った「伸ばし方」を知り、豊かな成長と円滑な子育てをサポートします。</p>
+            </div>
+            <button type="button" aria-expanded="false" data-toggle-target="wisc-details"
+                class="w-full bg-black text-white py-3 rounded-full flex items-center justify-center gap-2 mb-6 font-bold detail-toggle-btn">
+                詳しく見る
+                <span
+                    class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[10px]">↓</span>
+            </button>
+            <div id="wisc-details" class="hidden text-[12px] space-y-4 text-gray-800 leading-relaxed">
+                <p class="bullet-square font-bold">検査内容：</p>
+                <p>心理士とマンツーマンで図形パズルやクイズ形式の課題を行います。</p>
+                <p>【わかること】</p>
+                <div class="space-y-4 pl-1">
+                    <p class="check-mark">言語理解（言葉の意味を理解し、伝える力）<br />ここが高いと：読書で吸収するのが早い、語彙が豊富で説明が上手。</p>
+                    <p class="check-mark">知覚推理（目で見た情報から推測・解決する力）<br />ここが高いと：空間把握が得意でサッカーなどの球技が上手、ひらめきが強い。</p>
+                    <p class="check-mark">
+                        ワーキングメモリー（情報を一時的に頭に留めておく力）<br />ここでの気づき：「忘れ物が多い」「指示を聞き漏らす」原因が見えてきます。暗算の得意・不得意にも関係します。</p>
+                    <p class="check-mark">
+                        処理速度（作業を正確に、素早く行う力）<br />ここでの気づき：「板書の書き写しが遅い」「宿題に時間がかかる」のは、やる気の問題ではなく、この特性が影響している場合があります。</p>
+                </div>
+                <p>お子さまの特性を把握し、得意なことを最大限伸ばし、<br />できないことを叱るのではなく、理解し適切にサポートしましょう!!</p>
+                <p class="bullet-square font-bold">概要</p>
+                <ul class="list-none pl-1 space-y-1">
+                    <li>・対象：5 歳〜16 歳</li>
+                    <li>・費用：44,000 円 (税込)</li>
+                    <li>・所要時間：1.5〜2 時間程度</li>
+                    <li>※ 結果説明（後日）を含みます。</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 検査カード 2: NIPT -->
+        <div class="bg-white rounded-lg p-6 mb-8 card-shadow border-t-4 border-orange-main" data-purpose="nipt-exam">
+            <h3 class="text-xl font-extrabold text-orange-main text-center mb-5 pb-2 border-b-2 border-orange-main">
+                出生前検査（NIPT）</h3>
+            <div class="border-b border-orange-200 mb-6 pb-2">
+                <p class="text-center text-orange-main font-extrabold text-sm leading-relaxed">
+                    ママと赤ちゃんの身体に<br />
+                    やさしい、採血だけでわかる<br />
+                    出生前検査。
+                </p>
+            </div>
+            <div class="text-sm leading-relaxed space-y-4 mb-8">
+                <p>お母さんの腕から採血を行い、血液中に含まれる赤ちゃんのDNAを分析します。一般的な健康診断の採血と同じように行えるため、身体的な負担や痛みが非常に少ないのが特徴です。</p>
+                <p>妊娠10週という早い時期から、ダウン症候群などの染色体疾患のリスクや性別も高い精度で調べることができます。</p>
+            </div>
+            <button type="button" aria-expanded="false" data-toggle-target="nipt-details"
+                class="w-full bg-black text-white py-3 rounded-full flex items-center justify-center gap-2 mb-6 font-bold detail-toggle-btn">
+                詳しく見る
+                <span
+                    class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[10px]">↓</span>
+            </button>
+            <div id="nipt-details" class="hidden text-[12px] space-y-4 text-gray-800 leading-relaxed">
+                <p class="bullet-square font-bold">DNAサイエンス株式会社 提携医療機関</p>
+                <p>当院は、NIPT検査の実績豊富な検査機関「DNAサイエンス」と提携し、検査の実施窓口を行っております。採血はすべて当院（オレンジ広尾クリニック）で受けることができます。</p>
+                <p>【特徴】</p>
+                <ul class="list-none pl-1 space-y-1">
+                    <li>・所要時間：約30分</li>
+                    <li>・年齢制限なし、紹介状不要</li>
+                    <li>・当院で採血ができ、結果はメールで送信されます。</li>
+                    <li>・完全予約制のため、他の患者様と顔を合わせることなく、プライバシーを守った環境で採血できます。</li>
+                </ul>
+                <p>※検査の詳細確認・ご予約・お支払いは、すべて提携先（DNAサイエンス）の専用サイトにて承っております。</p>
+                <p class="bullet-square font-bold">【当院限定】お得なキャンペーン実施中</p>
+                <p>当院でNIPT検査を受診される方限定で、検査料金が5,000円割引になるキャンペーンコードをご用意しています。</p>
+                <p>DNAサイエンスの専用サイトからご予約の際に、以下のコードをご入力ください。</p>
+                <p>キャンペーンコード：dna_oushuku</p>
+                <a class="block w-full text-center bg-black text-white py-3 rounded-full font-bold transition-colors hover:opacity-90"
+                    href="https://nipt.ne.jp/clinic/hiroo-orange-cl/" target="_blank" rel="noopener noreferrer">
+                    ご予約・詳細はこちら
+                </a>
+            </div>
+        </div>
+        <!-- 検査カード 3: アレルギー -->
+        <div class="bg-white rounded-lg p-6 mb-8 card-shadow border-t-4 border-orange-main" data-purpose="allergy-exam">
+            <h3 class="text-orange-main text-xl font-bold text-center mb-4 border-b-2 border-orange-main">アレルギー検査</h3>
+            <div class="border-b border-orange-200 mb-6 pb-2">
+                <p class="text-center text-orange-main font-bold text-sm leading-relaxed">
+                    アレルギー検査<br />
+                    (即時型・遅延型)
+                </p>
+            </div>
+            <div class="text-sm leading-relaxed space-y-4 mb-8">
+                <p>命に関わるアナフィラキシーや蕁麻疹を診るための「即時型」。日々の集中力低下やだるさの正体を探る「遅延型」。反応の現れ方が違う 2 つの検査で、体質に合わない食事や環境を見つけ出します。</p>
+                <p>検査結果は日々のリスク管理と学習環境の改善への第一歩。お子様が本来の力をのびのびと発揮できる、健やかな環境をつくりあげます。</p>
+            </div>
+            <button type="button" aria-expanded="false" data-toggle-target="allergy-details"
+                class="w-full bg-black text-white py-3 rounded-full flex items-center justify-center gap-2 mb-6 font-bold detail-toggle-btn">
+                詳しく見る
+                <span
+                    class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[10px]">↓</span>
+            </button>
+            <div id="allergy-details" class="hidden text-[12px] space-y-4 text-gray-800 leading-relaxed">
+                <p class="bullet-square font-bold">どっちを受ければいいい？</p>
+                <p>2 つの検査の選び方</p>
+                <p>当院では、お悩みの種類に合わせて 2 つの検査をご用意しています。急なトラブルを未然に防ぐ「即時型 (View39)」か生活の “ 安全管理 ” なら、長引く不調を根本から見直す「遅延型
+                    (IgG)」は体質改善の “ ヒント ” を探る検査です。</p>
+                <p class="font-bold">① 即時型検査 (View39)</p>
+                <p>「急な蕁麻疹や、食事の後の違和感が心配」な方へ。<br />特定のアレルゲンに触れてすぐに起こる、くしゃみ・鼻水・アナフィラキシーなど 39
+                    項目をチェック。「何を避ければ安全か」を知り、安心して過ごせる毎日を作ります。</p>
+                <ul class="list-none pl-1">
+                    <li>・対象：3 歳以上</li>
+                    <li>・費用：15,500 円 (税込)</li>
+                    <li>・結果：約 1 週間後</li>
+                </ul>
+                <p class="font-bold">② 遅延型検査 (IgG)</p>
+                <p>「寝ても疲れが取れない」「原因不明の肌荒れや不調が続く」がある方へ。<br />食べてから数時間〜数日後にじわじわと不調が出る「隠れアレルギー」。219
+                    項目をチェック。「年齢のせい」「体質のせい」と諦めていた慢性的なだるさや頭痛、肌トラブルの原因を食事から特定し、体の内側からコンディションを整えます。</p>
+                <ul class="list-none pl-1">
+                    <li>・対象：高校生以上推奨（小中学生は要相談）</li>
+                    <li>・費用：55,000 円 (税込)</li>
+                    <li>・結果：約 2〜3 週間後</li>
+                </ul>
+                <p class="bullet-square font-bold">よくあるご質問</p>
+                <p>Q. 両方受けることもできますか？<br />A. はい、可能です。採血量も調整しますので、同日の検査をおすすめしています。</p>
+            </div>
+        </div>
+    </section>
+    <!-- 終了: メニューセクション -->
+
+    <!-- 開始: レビューセクション（review.html から統合） -->
+    <section id="voices" class="testimonials-match py-16 px-4 max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto">
+        <div class="flex justify-center mb-4">
+            <img alt="Message" class="w-14 h-auto object-contain" src="images/message.png" />
+        </div>
+        <div class="testimonials-heading text-center mb-8">
+            <h2 class="text-2xl font-bold text-on-surface leading-snug">およろこびの声を<br />いただいています</h2>
+        </div>
+        <div class="testimonials-tabs grid grid-cols-2 gap-2 mb-10">
+            <div class="testimonials-tab testimonials-tab-active">
+                LifeDock</div>
+            <div class="testimonials-tab testimonials-tab-active testimonials-tab-with-pointer">
+                知能検査
+                <div
+                    class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-primary">
+                </div>
+            </div>
+            <div class="testimonials-tab testimonials-tab-muted">
+                アレルギー検査</div>
+            <div class="testimonials-tab testimonials-tab-muted">NIPT検査
+            </div>
+        </div>
+        <div class="testimonials-list">
+            <div class="testimonial-card relative pt-6 border-2 border-primary rounded-2xl p-6 bg-white">
+                <div
+                    class="testimonial-badge absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-md">
+                    LifeDock 血液検査/栄養指導
+                </div>
+                <div class="testimonial-age text-center mb-4">
+                    <p class="text-primary font-bold text-sm">お子様のご年齢：9歳</p>
+                </div>
+                <p class="testimonial-body text-on-surface text-[13px] leading-[1.8] text-justify">
+                    最初は子供に血液検査をするのがかわいそうと思っていましたが、今の栄養状態を見て不足している栄養がわかると、将来の健康のために、今のうちからしっかり正しい情報で、食事内容に気を付けなきゃと思いました。<br />
+                    将来の自分の体を大事にするという健康意識の基礎を身につけさせてあげることは大事と感じました。3年生男児ですが、全く泣かずにむしろ、注射を頑張れたと自信になった様子でした。<br />
+                    血液検査の結果から明日から使える不足栄養素を補うレシピを教えて貰い助かりました。
+                </p>
+            </div>
+            <div class="testimonial-card relative pt-6 border-2 border-primary rounded-2xl p-6 bg-white">
+                <div
+                    class="testimonial-badge absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-10 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-md">
+                    知能検査
+                </div>
+                <div class="testimonial-age text-center mb-4">
+                    <p class="text-primary font-bold text-sm">お子様のご年齢：10歳</p>
+                </div>
+                <p class="testimonial-body text-on-surface text-[13px] leading-[1.8] text-justify">
+                    検査のおかげで、わが子の思考のクセや得意な学び方が具体的に分かりました。今まで手探りだった勉強の付き合い方が、無理のない方法で進められるようになり親子でのストレスも減りました。特性を知ることが、こんなに心強いとは思いませんでした。
+                </p>
+            </div>
+            <div class="testimonial-card relative pt-6 border-2 border-primary rounded-2xl p-6 bg-white">
+                <div
+                    class="testimonial-badge absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-10 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-md">
+                    即時性アレルギー検査
+                </div>
+                <div class="testimonial-age text-center mb-4">
+                    <p class="text-primary font-bold text-sm">お子様のご年齢：1歳</p>
+                </div>
+                <p class="testimonial-body text-on-surface text-[13px] leading-[1.8] text-justify">
+                    ママ友の子供が初めてキウイを食べた時に肌が赤くなり、咳が酷いと訴え出して焦ったとき、アナフィラキシーショックの話題もSNSで見ていたので、気になり受けました。エビアレルギーの可能性があるとわかったので、子供がエビを食べるときには見守りながら食べてもらうことにしています。
+                </p>
+            </div>
+            <div class="testimonial-card relative pt-6 border-2 border-primary rounded-2xl p-6 bg-white">
+                <div
+                    class="testimonial-badge absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-10 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-md">
+                    NIPT 検査
+                </div>
+                <div class="testimonial-age text-center mb-4">
+                    <p class="text-primary font-bold text-sm">女性 38歳</p>
+                </div>
+                <p class="testimonial-body text-on-surface text-[13px] leading-[1.8] text-justify">
+                    最近周りのママもやっていたので気になっていて、2人目の出産時に夫と相談して検査を受けることにしました。アクセスが良いのと、待ち時間なく、綺麗でおしゃれな院内で、明るい気持ちで検査を受けることができました。クーポンコードも使えてお得にできました。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="flow" class="flow-match py-5 bg-background px-4">
+        <div class="flow-inner max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto">
+            <div class="flow-heading text-center mb-12">
+                <img alt="Up" class="w-12 h-12 mx-auto mb-2 object-contain" src="images/up.png" />
+                <h2 class="flow-title text-2xl font-bold text-on-surface">ご利用の流れ</h2>
+            </div>
+            <div class="flow-list space-y-4">
+                <div
+                    class="flow-card bg-white rounded-2xl overflow-hidden border border-primary-light flex items-stretch shadow-sm">
+                    <div class="flow-media w-1/3 min-h-[140px]">
+                        <img alt="Step 1" class="w-full h-full object-cover" src="images/step1.png" />
+                    </div>
+                    <div class="flow-copy w-2/3 p-4 flex flex-col justify-center">
+                        <div
+                            class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
+                            Step 1</div>
+                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">来院予約</h3>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">まずは無料カウンセリング
+                        </p>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">インスタグラム DMやお電話からでも
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flow-card bg-white rounded-2xl overflow-hidden border border-primary-light flex items-stretch shadow-sm">
+                    <div class="flow-media w-1/3 min-h-[140px]">
+                        <img alt="Step 2" class="w-full h-full object-cover" src="images/step2.png" />
+                    </div>
+                    <div class="flow-copy w-2/3 p-4 flex flex-col justify-center">
+                        <div
+                            class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
+                            Step 2</div>
+                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">ご来院（問診・採血）
+                        </h3>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">
+                            検査内容によりますが30分〜お時間いただきます</p>
+                    </div>
+                </div>
+                <div
+                    class="flow-card bg-white rounded-2xl overflow-hidden border border-primary-light flex items-stretch shadow-sm">
+                    <div class="flow-media w-1/3 min-h-[140px]">
+                        <img alt="Step 3" class="w-full h-full object-cover" src="images/step3.png" />
+                    </div>
+                    <div class="flow-copy w-2/3 p-4 flex flex-col justify-center">
+                        <div
+                            class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
+                            Step 3</div>
+                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">スマホで結果を確認</h3>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">結果はスマホから確認できる
+                        </p>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">管理が楽で便利
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flow-card bg-white rounded-2xl overflow-hidden border border-primary-light flex items-stretch shadow-sm">
+                    <div class="flow-media w-1/3 min-h-[140px]">
+                        <img alt="Step 4" class="w-full h-full object-cover" src="images/step4.png" />
+                    </div>
+                    <div class="flow-copy w-2/3 p-4 flex flex-col justify-center">
+                        <div
+                            class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
+                            Step 4</div>
+                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">対面アドバイス</h3>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">食育・栄養アドバイスを行います</p>
+                        <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">※検査内容によります</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="director" class="faq-match py-20 px-6 max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto">
+        <div class="text-center mb-10">
+            <span class="material-symbols-outlined text-[#E8C08A] text-5xl mb-2">assignment_ind</span>
+            <h2 class="text-2xl font-bold text-on-surface">院長紹介</h2>
+        </div>
+        <div class="flex flex-col items-center mb-8">
+            <div class="w-48 h-48 rounded-full overflow-hidden shadow-lg mb-6 border-4 border-white">
+                <img alt="Dr. Satohiro Kawade" class="w-full h-full object-cover" src="images/innchou.png" />
+            </div>
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-on-surface mb-1">医師 川出 智大</h3>
+                <p class="text-base font-bold text-on-surface">Satohiro Kawade</p>
+            </div>
+            <div class="w-full border-2 border-primary rounded-3xl p-6 bg-white relative">
+                <h4 class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-8 text-primary font-extrabold text-xl">
+                    Career</h4>
+                <ul class="space-y-3 pt-4">
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="w-4 h-4 rounded-full border-2 border-primary mt-1 shrink-0 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <span class="text-sm font-medium">愛知県名古屋市 出身</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="w-4 h-4 rounded-full border-2 border-primary mt-1 shrink-0 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <span class="text-sm font-medium">聖マリアンナ医科大学 卒業</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="w-4 h-4 rounded-full border-2 border-primary mt-1 shrink-0 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <span class="text-sm font-medium">神戸市立医療センター<br />中央市民病院 脳外科 勤務</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="w-4 h-4 rounded-full border-2 border-primary mt-1 shrink-0 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <span class="text-sm font-medium">株式会社 OUSHUKU 設立</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="w-4 h-4 rounded-full border-2 border-primary mt-1 shrink-0 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <span class="text-sm font-medium">広尾オレンジクリニック 開設院長</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="w-4 h-4 rounded-full border-2 border-primary mt-1 shrink-0 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <span class="text-sm font-medium">2025年6月末 LifeDock 提供開始</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="mt-10 text-[18px] leading-[2] text-on-surface text-justify font-bold">
+                脳外科医として超急性期脳卒中診療に従事。生活習慣病の末期の患者を診療する中で、子どもの頃からの生活習慣病予防が重要であるとの想いから、LifeDock
+                サービスを立ち上げました。受験が終わってからの長い人生を健康に過ごすために、運動量が少なくなり、栄養が偏りがちな受験生をサポートします。
+            </p>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 px-6 max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto">
+        <div class="text-center mb-12">
+            <span class="material-symbols-outlined text-[#E8C08A] text-5xl mb-2">forum</span>
+            <h2 class="text-2xl font-bold text-on-surface">よくある質問</h2>
+        </div>
+        <div class="faq-list space-y-8">
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">何歳から検査を受けられますか？</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">血液検査は3歳以上から大人まで可能です。<br />知能検査は5歳〜16歳です。
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">保険診療はしていますか？</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">完全自由診療のクリニックです。</p>
+                </div>
+            </div>
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">どうやって予約すればいいですか？</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">
+                        まずは無料カウンセリングをご予約ください。ご来院時に最適なプランのご提案とご予約を取らせて頂きます。</p>
+                </div>
+            </div>
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">検査結果はいつわかりますか？</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">
+                        血液検査の結果は3週間ほど、知能検査の結果は1週間ほど。<br />アレルギーやNIPTなどその他血液検査は、1〜2週間程度でお客様にメールが届き、ログインすることでWeb上で結果を確認することができます。
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">こどもが血液検査を嫌がらないか心配です</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <div class="text-sm text-on-surface leading-relaxed pt-1">
+                        <p>当院ではこども採血の経験豊富な看護師が対応しております。<br />小学校低学年までは最初は緊張していますが、受けた後は「頑張れたよ！！」と保護者の方に報告している子もおり、「思ったより痛くなかった。」とお声をいただくことが多いです。<br />※どうしても採血が難しいケースもあります。ご了承ください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">処方はしていますか？</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">
+                        お薬の処方はしておりません。医療機関でしか購入できない安全性の高いサプリメントの販売はしています。</p>
+                </div>
+            </div>
+            <div class="space-y-3 pb-6 border-b border-orange-100">
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center shrink-0 font-extrabold text-primary text-sm">
+                        Q</div>
+                    <p class="font-bold text-sm text-primary pt-1">こどもでも生活習慣病になるの？</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
+                        A</div>
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">
+                        生活習慣病は痛い、痒いなどの症状として現れないため気づきませんが、早い人では55歳ごろに血管の病気として表に現れます。こどもの頃から将来の生活習慣病の根っこはあります。早めに対処をしてあげることが大切です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="py-20 px-4 max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto">
+        <div class="flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-6">
+                <img alt="Logo" class="w-10 h-10 object-contain" src="images/logo.png" />
+                <h2 class="text-2xl font-black text-primary italic">広尾オレンジクリニック</h2>
+            </div>
+            <div
+                class="w-full bg-primary text-white text-center py-2 text-[11px] font-bold tracking-widest rounded-t-lg">
+                当院は自由診療専門のクリニックです
+            </div>
+            <div
+                class="w-full bg-white border-2 border-primary border-t-0 p-8 rounded-b-2xl shadow-lg flex flex-col items-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="material-symbols-outlined text-4xl text-on-surface">call</span>
+                    <span class="text-4xl font-black text-on-surface tracking-tighter">03-6277-1548</span>
+                </div>
+                <p class="text-[11px] font-bold text-on-surface mb-4">■診療時間 / 10:00 - 20:00</p>
+                <div class="bg-white border-2 border-primary px-10 py-1.5 rounded-full mb-10 shadow-sm">
+                    <span class="text-primary font-black text-sm">完全予約制 <span
+                            class="mx-2 text-on-surface-variant font-medium text-xs">土日祝日も可能</span></span>
+                </div>
+                <div
+                    class="w-full h-80 rounded-2xl overflow-hidden border border-orange-100 shadow-inner mb-10 relative">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.077907248648!2d139.71852727653658!3d35.65045213166296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9b40e75943%3A0x5d920efbd44470ed!2z5bqD5bC-44Kq44Os44Oz44K444Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1775188048435!5m2!1sja!2sjp"
+                        class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="flex items-center gap-6 w-full">
+                    <div
+                        class="bg-primary text-white p-4 rounded-full flex flex-col items-center justify-center shrink-0 w-24 h-24 text-center leading-none">
+                        <span class="text-[17px] font-black leading-none whitespace-nowrap">広尾駅</span>
+                        <span class="text-[17px] font-black leading-none whitespace-nowrap">徒歩2分</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-[13px] font-bold text-on-surface mb-1">〒150-0012</p>
+                        <p class="text-[13px] font-bold text-on-surface leading-snug">東京都渋谷区広尾 5 丁目 3-13<br />バルビゾン
+                            86 4階</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a class="w-12 h-12 rounded-full border border-orange-200 flex items-center justify-center"
+                        href="#">
+                        <img alt="Instagram" class="w-6 h-6" src="images/ins.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 終了: レビューセクション -->
+
+    <nav class="bottom-cta fixed bottom-0 left-0 w-full z-50 h-[74px] md:hidden">
+        <div class="bottom-cta-grid grid grid-cols-3 h-full">
+            <a class="bottom-cta-item bottom-cta-instagram"
+                href="https://www.instagram.com/hiroo_orange_clinic?igsh=NTJpbGhsZ2R3ank2&utm_source=qr" target="_blank"
+                rel="noopener noreferrer">
+                <img alt="Instagram" class="bottom-cta-icon" src="images/ins.png" />
+                <span class="bottom-cta-label-stack">
+                    <span>インスタグラム</span>
+                    <span>DMでもOK</span>
+                </span>
+            </a>
+            <a class="bottom-cta-item bottom-cta-phone" href="tel:03-6277-1548">
+                <span class="material-symbols-outlined bottom-cta-phone-icon">call</span>
+                <span class="bottom-cta-phone-label">電話する</span>
+            </a>
+            <a class="bottom-cta-item bottom-cta-web"
+                href="https://docs.google.com/forms/d/1l8unO8_Lnkkv04j2z3C5rR0eWpj6RfjMExMjg99uAgA/viewform?edit_requested=true"
+                target="_blank" rel="noopener noreferrer">
+                <span class="bottom-cta-web-label">WEB予約</span>
+            </a>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
