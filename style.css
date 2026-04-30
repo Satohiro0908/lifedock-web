@@ -7,6 +7,7 @@
 	--hoc-dark-section: #2D2622;
 	--hoc-text-default: #333333;
 	--hoc-review-bg: #FEF9F3;
+	--hoc-bottom-cta-height: 74px;
 }
 
 /* ページ共通の初期設定 */
@@ -14,7 +15,7 @@ body.page-index {
 	font-family: 'Noto Sans JP', sans-serif;
 	color: var(--hoc-text-default);
 	background-color: #ffffff;
-	padding-bottom: 74px;
+	padding-bottom: var(--hoc-bottom-cta-height);
 }
 
 @media (min-width: 768px) {
@@ -26,7 +27,7 @@ body.page-index {
 body.page-review {
 	font-family: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
 	background-color: var(--hoc-review-bg);
-	padding-bottom: 74px;
+	padding-bottom: var(--hoc-bottom-cta-height);
 }
 
 /* 横幅に応じて文字サイズを可変にする（小さい画面ほど小さく） */
@@ -89,8 +90,53 @@ body.page-review {
 	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+#mobile-submenu[data-menu-state="open"] {
+	transition-duration: 320ms;
+	transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#mobile-submenu[data-menu-state="closing"],
+#mobile-submenu[data-menu-state="closed"] {
+	transition-duration: 520ms;
+	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 .text-shadow-sm {
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.page-reveal {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity 520ms ease, transform 520ms ease;
+	will-change: opacity, transform;
+}
+
+.page-reveal.page-reveal-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.detail-slide {
+	overflow: hidden;
+	transform: translateY(-10px);
+	transition: transform 280ms ease;
+}
+
+.detail-slide.detail-slide-visible {
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.detail-slide {
+		transition: none;
+	}
 }
 
 /* LifeDock 特徴カード */
@@ -208,9 +254,9 @@ body.page-review {
 .testimonials-match .testimonial-badge {
 	top: -0.62rem;
 	border-radius: 0;
-	padding: 0.14rem 0.9rem;
-	font-size: 0.58rem;
-	line-height: 1.2;
+	padding: 0.24rem 1.15rem;
+	font-size: 0.72rem;
+	line-height: 1.25;
 	font-weight: 700;
 	background-color: #df7a27;
 	clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
@@ -287,10 +333,10 @@ body.page-review {
 }
 
 .flow-match .flow-step-chip {
-	padding: 0.05rem 0.55rem;
+	padding: 0.12rem 0.75rem;
 	border-radius: 999px;
-	font-size: 0.62rem;
-	line-height: 1.25;
+	font-size: 0.78rem;
+	line-height: 1.35;
 	font-weight: 700;
 	margin-bottom: 0.15rem;
 	background-color: #df7a27;
@@ -394,7 +440,7 @@ body.page-review {
 /* 下部固定CTAバー */
 .bottom-cta {
 	border-top: 1px solid rgba(255, 255, 255, 0.25);
-	height: 68px;
+	height: var(--hoc-bottom-cta-height);
 	z-index: 70;
 }
 
@@ -447,7 +493,7 @@ body.page-review {
 }
 
 .bottom-cta-phone-label {
-	font-size: 1.65rem;
+	font-size: 1.45rem;
 	line-height: 1;
 	font-weight: 800;
 	letter-spacing: 0.01em;
