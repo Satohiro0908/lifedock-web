@@ -30,6 +30,52 @@ body.page-review {
 	padding-bottom: var(--hoc-bottom-cta-height);
 }
 
+@media (max-width: 424.98px) {
+	html {
+		font-size: clamp(13px, 3.5vw, 16px);
+	}
+
+	body.page-index {
+		--hoc-bottom-cta-height: 68px;
+	}
+
+	.page-index .text-\[18px\] {
+		font-size: 0.95rem;
+	}
+
+	.page-index .text-\[17px\] {
+		font-size: 0.9rem;
+	}
+
+	.page-index .text-\[13px\] {
+		font-size: 0.78rem;
+	}
+
+	.page-index .text-\[12px\] {
+		font-size: 0.72rem;
+	}
+
+	.page-index .text-\[11px\] {
+		font-size: 0.68rem;
+	}
+
+	.page-index .text-\[10px\] {
+		font-size: 0.62rem;
+	}
+
+	.page-index .top-\[61px\] {
+		top: 56px;
+	}
+
+	.page-index .bottom-cta-phone-label {
+		font-size: 1.35rem;
+	}
+
+	.page-index .bottom-cta-web-label {
+		font-size: 1.4rem;
+	}
+}
+
 /* 横幅に応じて文字サイズを可変にする（小さい画面ほど小さく） */
 .text-2xl {
 	font-size: clamp(1.15rem, 5vw, 1.5rem);
@@ -49,6 +95,11 @@ body.page-review {
 
 .text-xs {
 	font-size: clamp(0.68rem, 2.9vw, 0.75rem);
+}
+
+/* 電話番号: 425pxを基準にレスポンシブなサイズ */
+.phone-responsive-text {
+	font-size: clamp(18px, 8.47vw, 36px);
 }
 
 /* ページ共通で使うユーティリティクラス */
@@ -343,7 +394,7 @@ body.page-review {
 }
 
 .flow-match .flow-step-title {
-	font-size: 1.6rem;
+	font-size: clamp(1.3rem, 5vw, 1.8rem);
 	line-height: 1.08;
 	font-weight: 800;
 	color: #df7a27;
@@ -592,23 +643,51 @@ body.page-review {
 	}
 }
 
+@media (min-width: 1600px) {
+	.feature-cards-wrap {
+		max-width: 1600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#voices {
+		max-width: 1600px;
+	}
+
+	.flow-match .flow-inner {
+		max-width: 1600px;
+	}
+
+	#director {
+		max-width: 1600px;
+	}
+
+	#faq {
+		max-width: 1600px;
+	}
+
+	#access {
+		max-width: 1600px;
+	}
+}
+
 @media (min-width: 1920px) {
 	.feature-cards-wrap {
-		max-width: 1320px;
+		max-width: 1760px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.testimonials-match {
-		max-width: 1480px;
+		max-width: 1760px;
 	}
 
 	.flow-match .flow-inner {
-		max-width: 1480px;
+		max-width: 1760px;
 	}
 
 	.faq-match {
-		max-width: 1480px;
+		max-width: 1760px;
 	}
 
 	.bottom-cta-phone-label {
