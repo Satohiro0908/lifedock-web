@@ -46,14 +46,13 @@
     <link href="style.css" rel="stylesheet" />
 </head>
 
-<body id="top"
-    class="page-index w-full max-w-[480px] md:max-w-[1100px] xl:max-w-[1320px] 2xl:max-w-[1560px] mx-auto overflow-x-hidden">
+<body id="top" class="page-index w-full max-w-none overflow-x-hidden">
     <!-- 開始: メインヘッダー -->
     <header
         class="flex items-center justify-between px-4 py-3 md:px-6 bg-white sticky top-0 z-50 border-b border-gray-100"
         data-purpose="site-header">
         <div class="flex items-center gap-2">
-            <img alt="広尾オレンジクリニック" class="w-8 h-8" src="images/logo.png" />
+            <img alt="広尾オレンジクリニック" class="w-8 h-8" src="images/logo.png" data-priority />
             <span class="text-orange-main font-bold text-lg md:text-xl leading-tight">広尾オレンジクリニック</span>
         </div>
         <button type="button" aria-expanded="false" aria-controls="mobile-submenu"
@@ -65,7 +64,7 @@
         </button>
     </header>
     <nav id="mobile-submenu"
-        class="fixed top-[61px] left-1/2 -translate-x-1/2 w-full max-w-[480px] md:max-w-[1100px] xl:max-w-[1320px] 2xl:max-w-[1560px] z-40 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-md transition-transform transition-opacity duration-300 ease-out -translate-y-full opacity-0 pointer-events-none"
+        class="fixed top-[61px] left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-md transition-transform transition-opacity duration-300 ease-out -translate-y-full opacity-0 pointer-events-none"
         data-purpose="mobile-submenu">
         <ul class="py-2 text-sm font-bold text-[#1b1c1c]">
             <li><a class="block px-5 py-3 hover:bg-[#fff5ee]" href="#top">TOP</a></li>
@@ -81,7 +80,7 @@
     <!-- 終了: メインヘッダー -->
     <!-- 開始: ヒーローセクション -->
     <section class="relative" data-purpose="hero-banner">
-        <img alt="Clinic Interior" class="w-full h-auto" src="images/entrance.png" />
+        <img alt="Clinic Interior" class="w-full h-auto" src="images/entrance.png" data-priority loading="eager" />
         <div class="bg-orange-main text-white px-8 py-10 text-center flex flex-col items-center">
             <img alt="LifeDock" class="w-16 h-16 mb-4" src="images/logo_white.png" />
             <h1 class="text-xl md:text-2xl font-bold leading-relaxed tracking-wider mb-4">
@@ -195,7 +194,7 @@
                 </p>
             </div>
         </div>
-        <div class="mb-12">
+        <div>
             <img alt="Staff" class="w-64 h-auto mx-auto mb-8" src="images/staff.png" />
             <a class="block w-full py-4 bg-orange-main text-white font-bold rounded-lg shadow-lg hover:bg-orange-dark transition-colors"
                 href="https://life-dock.jp/" target="_blank" rel="noopener noreferrer">
@@ -436,7 +435,7 @@
                         <div
                             class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
                             Step 1</div>
-                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">来院予約</h3>
+                        <h3 class="flow-step-title font-bold text-primary text-base leading-tight mb-1">来院予約</h3>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">まずは無料カウンセリング
                         </p>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">インスタグラム DMやお電話からでも
@@ -452,7 +451,7 @@
                         <div
                             class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
                             Step 2</div>
-                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">ご来院（問診・採血）
+                        <h3 class="flow-step-title font-bold text-primary text-base leading-tight mb-1">ご来院（問診・採血）
                         </h3>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">
                             検査内容によりますが30分〜お時間いただきます</p>
@@ -467,7 +466,7 @@
                         <div
                             class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
                             Step 3</div>
-                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">スマホで結果を確認</h3>
+                        <h3 class="flow-step-title font-bold text-primary text-base leading-tight mb-1">スマホで結果を確認</h3>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">結果はスマホから確認できる
                         </p>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">管理が楽で便利
@@ -483,7 +482,7 @@
                         <div
                             class="flow-step-chip inline-block bg-primary text-white text-[10px] font-bold px-3 py-0.5 rounded-full mb-1 w-fit">
                             Step 4</div>
-                        <h3 class="flow-step-title font-bold text-primary text-lg leading-tight mb-1">対面アドバイス</h3>
+                        <h3 class="flow-step-title font-bold text-primary text-base leading-tight mb-1">対面アドバイス</h3>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">食育・栄養アドバイスを行います</p>
                         <p class="flow-step-lead text-sm font-bold text-on-surface leading-snug">※検査内容によります</p>
                     </div>
@@ -560,7 +559,7 @@
         </div>
     </section>
 
-    <section id="faq" class="py-20 px-6 max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto">
+    <section id="faq" class="py-20 px-6 max-w-xl md:max-w-5xl 2xl:max-w-[1320px] mx-auto bg-background">
         <div class="text-center mb-12">
             <span class="material-symbols-outlined text-[#E8C08A] text-5xl mb-2">forum</span>
             <h2 class="text-2xl font-bold text-on-surface">よくある質問</h2>
@@ -577,7 +576,7 @@
                     <div
                         class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 font-extrabold text-white text-sm">
                         A</div>
-                    <p class="text-sm text-on-surface leading-relaxed pt-1">血液検査は3歳以上から大人まで可能です。<br />知能検査は5歳〜16歳です。
+                    <p class="text-sm text-on-surface leading-relaxed pt-1">血液検査は3歳以上から大人まで可能です。知能検査は5歳〜16歳です。
                     </p>
                 </div>
             </div>
@@ -689,12 +688,13 @@
             </div>
             <div
                 class="w-full bg-white border-2 border-primary border-t-0 p-8 rounded-b-2xl shadow-lg flex flex-col items-center">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="material-symbols-outlined text-4xl text-on-surface">call</span>
-                    <span class="text-4xl font-black text-on-surface tracking-tighter">03-6277-1548</span>
+                <div class="flex items-center gap-3 mb-4 whitespace-nowrap">
+                    <span class="material-symbols-outlined phone-responsive-text text-on-surface">call</span>
+                    <span class="phone-responsive-text font-black text-on-surface tracking-tighter">03-6277-1548</span>
                 </div>
                 <p class="text-[11px] font-bold text-on-surface mb-4">■診療時間 / 10:00 - 20:00</p>
-                <div class="bg-white border-2 border-primary px-10 py-1.5 rounded-full mb-10 shadow-sm">
+                <div
+                    class="bg-white border-2 border-primary px-10 py-1.5 rounded-full mb-10 shadow-sm whitespace-nowrap">
                     <span class="text-primary font-black text-sm">完全予約制 <span
                             class="mx-2 text-on-surface-variant font-medium text-xs">土日祝日も可能</span></span>
                 </div>
@@ -719,7 +719,7 @@
                             86 4階</p>
                     </div>
                 </div>
-                <div class="mt-12">
+                <div class="mt-6">
                     <a class="w-12 h-12 rounded-full border border-orange-200 flex items-center justify-center"
                         href="https://www.instagram.com/hiroo_orange_clinic?igsh=NTJpbGhsZ2R3ank2&utm_source=qr"
                         target="_blank" rel="noopener noreferrer">
