@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initializePageReveal();
   initializeMobileMenu();
   initializeDetailToggles();
+
+  // Defer non-critical images to lazy to reduce initial layout and resize work.
+  // Images marked with `data-priority` (e.g., header/logo/hero) will be skipped.
+  try {
+    document.querySelectorAll("img:not([data-priority])").forEach((img) => {
+      if (!img.hasAttribute("loading")) img.loading = "lazy";
+    });
+  } catch (e) {
+    // ignore
+  }
 });
 
 function initializePageReveal() {
@@ -82,8 +92,12 @@ function initializeMobileMenu() {
   }
 
   const syncSubmenuTop = () => {
-    if (siteHeader instanceof HTMLElement) {
-      mobileSubmenu.style.top = `${siteHeader.offsetHeight}px`;
+    if (!(siteHeader instanceof HTMLElement)) return;
+    const headerHeight = siteHeader.offsetHeight;
+    const prevTop = mobileSubmenu.style.top;
+    const newTop = `${headerHeight}px`;
+    if (prevTop !== newTop) {
+      mobileSubmenu.style.top = newTop;
     }
   };
 
@@ -133,7 +147,16 @@ function initializeMobileMenu() {
   syncSubmenuTop();
   setMenuState(false, { immediate: true });
 
-  window.addEventListener("resize", syncSubmenuTop);
+  // debounce resize with rAF to avoid layout thrash during continuous resize
+  let resizeRaf = null;
+  const onResize = () => {
+    if (resizeRaf !== null) cancelAnimationFrame(resizeRaf);
+    resizeRaf = requestAnimationFrame(() => {
+      syncSubmenuTop();
+      resizeRaf = null;
+    });
+  };
+  window.addEventListener("resize", onResize, { passive: true });
   menuToggleButton.addEventListener("click", toggleMenu);
 
   mobileSubmenu.querySelectorAll('a[href^="#"]').forEach((link) => {
